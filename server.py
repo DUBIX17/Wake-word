@@ -10,7 +10,7 @@ app = Flask(__name__)
 # Init Porcupine
 access_key = os.getenv("PICOVOICE_KEY")  # set in Render dashboard
 ppn_file = "./wake_word.ppn"             # include in repo
-porcupine = Porcupine(access_key=access_key, keyword_paths=[ppn_file])
+porcupine = pvporcupine.create(access_key=access_key, keyword_paths=[ppn_file])
 
 @app.route("/")
 def index():
