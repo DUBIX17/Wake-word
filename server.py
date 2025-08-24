@@ -3,7 +3,7 @@ import wave
 import tempfile
 import os
 import struct
-from picovoice import Porcupine
+import pvporcupine
 
 app = Flask(__name__)
 
